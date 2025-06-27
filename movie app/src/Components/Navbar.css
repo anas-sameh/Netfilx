@@ -1,0 +1,203 @@
+.navbar {
+    background: #000!important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 1030;
+}
+
+.navbar-brand {
+    font-size: 2rem !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    color: #dc3545 !important;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+}
+
+.nav-link {
+    position: relative;
+    margin: 0 0.5rem;
+    color: #dc3545 !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff4d4d !important;
+}
+
+.dropdown-menu {
+    background: rgba(0, 0, 0, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    border-radius: 12px;
+    padding: 0.8rem;
+    margin-top: 0.8rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    min-width: 200px;
+    display: none;
+    position: absolute;
+    z-index: 1031;
+}
+
+.dropdown-menu.show {
+    display: block;
+    animation: dropdownFade 0.3s ease;
+}
+
+.dropdown-item {
+    color: #dc3545 !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.2rem 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-item:hover {
+    background: rgba(220, 53, 69, 0.15);
+    transform: translateX(5px);
+    color: #ff4d4d !important;
+}
+
+.dropdown-item::before {
+    content: '▶';
+    margin-right: 8px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover::before {
+    opacity: 1;
+    transform: translateX(-3px);
+}
+
+.nav-btn {
+    background: rgba(220, 53, 69, 0.8);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 1px;
+    backdrop-filter: blur(5px);
+}
+
+.nav-btn:hover {
+    background: rgba(220, 53, 69, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+}
+
+.navbar-toggler {
+    border: 1px solid rgba(220, 53, 69, 0.5);
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(220, 53, 69, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem !important;
+    }
+
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        border-radius: 12px;
+        margin-top: 1rem;
+        border: 1px solid rgba(220, 53, 69, 0.3);
+    }
+
+    .navbar-nav {
+        margin-bottom: 1rem !important;
+    }
+
+    .nav-link {
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(220, 53, 69, 0.1);
+    }
+
+    .dropdown-menu {
+        background: transparent !important;
+        border: none;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        position: static;
+    }
+
+    .dropdown-item {
+        padding: 0.8rem 1rem;
+        color: rgba(220, 53, 69, 0.8) !important;
+    }
+
+    .nav-btn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem !important;
+    }
+
+    .nav-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Fix for dropdown menu on mobile */
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+} 

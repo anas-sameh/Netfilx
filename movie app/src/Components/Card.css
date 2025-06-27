@@ -1,0 +1,130 @@
+.card-container {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    position: relative;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    aspect-ratio: 2/3;
+}
+
+.card-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 230, 0, 0.3);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.card-overlay {
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    height: 130px;
+    border-radius: 8px;
+
+}
+
+.card-overlay:hover .overlay-title {
+    color: #ffd900c3;
+    cursor: pointer;
+}
+
+.card-title {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-title {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+
+}
+
+.overlay-rating {
+    color: #ffd700;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .overlay-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .card-container {
+        margin-bottom: 0.8rem;
+    }
+    
+    .overlay-title {
+        font-size: 1rem;
+    }
+
+    .overlay-rating {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.6rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .card-container {
+        margin-bottom: 0.6rem;
+    }
+    
+    .overlay-title {
+        font-size: 0.9rem;
+    }
+
+    .overlay-rating {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .card-container {
+        margin-bottom: 0.5rem;
+    }
+    
+    .overlay-title {
+        font-size: 0.8rem;
+    }
+
+    .overlay-rating {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+    }
+} 
+
+
